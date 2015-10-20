@@ -19,4 +19,4 @@ def game(game_id):
     if game is None:
         abort(404)  # not found
 
-    return render_template('game.html')
+    return render_template('game.html', game=game)

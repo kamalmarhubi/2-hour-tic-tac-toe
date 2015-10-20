@@ -3,3 +3,9 @@
     <title>A tic tac toe game</title>
 </head>
 <h1>GAMEZ</h1>
+
+<ul>
+{% for x, y in zip(range(2), range(2)) %}
+<li>{{ x }}, {{ y }}: {{ game.at(x, y) }}</li>
+{% endfor %}
+</ul>

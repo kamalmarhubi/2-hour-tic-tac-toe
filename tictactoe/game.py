@@ -6,6 +6,9 @@ class Game(object):
     def __init__(self):
         self.turn = Game.X
         self.board = dict()
+
+    def at(self, x, y)
+        return self.board.get((x, y), None)
         
     def make_move(self, player, location):
         if player != self.turn:
