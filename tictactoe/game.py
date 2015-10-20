@@ -15,7 +15,7 @@ class Game(object):
             raise Exception('already played at %s' % location)
 
         self.board[location] = player
-        self.turn = Game.X if self.turn == Game.X else Game.O
+        self.turn = Game.O if self.turn == Game.X else Game.X
 
     def winner(self):
         """Returns Game.X, Game.O or None."""
