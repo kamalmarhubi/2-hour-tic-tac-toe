@@ -4,12 +4,21 @@
 </head>
 <h1>GAMEZ</h1>
 
+<form action="/game/{{game_id}}/move" method="POST">
 <table>
 {% for x in [0, 1, 2] %}
     <tr>
         {% for y in [0, 1, 2] %}
-            <td>{{ game.at(x, y) or '' }}</td>
+            {% if game.at(x, y) %}
+                <td>{{ game.at(x, y) }}</td>
+            {% else  %}
+                <td>
+                    <button type="submit" name="move" value="X|{{x}}|{{y}}">X</button>
+                    <button type="submit" name="move" value="O|{{x}}|{{y}}">O</button>
+                </td>
+            {% endif %}
         {% endfor %}
     </tr>
 {% endfor %}
 </table>
+</form>
