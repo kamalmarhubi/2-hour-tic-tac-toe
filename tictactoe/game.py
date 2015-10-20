@@ -7,7 +7,7 @@ class Game(object):
         self.turn = Game.X
         self.board = dict()
 
-    def at(self, x, y)
+    def at(self, x, y):
         return self.board.get((x, y), None)
         
     def make_move(self, player, location):

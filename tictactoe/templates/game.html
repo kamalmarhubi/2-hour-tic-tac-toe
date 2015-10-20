@@ -4,8 +4,12 @@
 </head>
 <h1>GAMEZ</h1>
 
-<ul>
-{% for x, y in zip(range(2), range(2)) %}
-<li>{{ x }}, {{ y }}: {{ game.at(x, y) }}</li>
+<table>
+{% for x in [0, 1, 2] %}
+    <tr>
+        {% for y in [0, 1, 2] %}
+            <td>{{ game.at(x, y) or '' }}</td>
+        {% endfor %}
+    </tr>
 {% endfor %}
-</ul>
+</table>
